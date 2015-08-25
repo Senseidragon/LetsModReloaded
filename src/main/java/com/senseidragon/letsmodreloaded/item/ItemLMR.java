@@ -1,10 +1,12 @@
 package com.senseidragon.letsmodreloaded.item;
 
+import com.senseidragon.letsmodreloaded.reference.Reference;
 import com.senseidragon.letsmodreloaded.reference.Textures;
 import com.senseidragon.letsmodreloaded.utility.LogHelper;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
@@ -15,20 +17,17 @@ import net.minecraft.item.ItemStack;
 public class ItemLMR extends Item {
     public ItemLMR() {
         super();
+        this.setCreativeTab(CreativeTabs.tabMisc);
     }
 
     @Override
     public String getUnlocalizedName() {
-        String x = String.format("item.%s%s", Textures.RESOURCE_PREFIX, getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
-        LogHelper.info("G1:" + x);
-        return x;
+        return String.format("item.%s%s", Reference.MOD_ID + ":", getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
     }
 
     @Override
     public String getUnlocalizedName(ItemStack itemStack) {
-        String x = String.format("item.%s%s", Textures.RESOURCE_PREFIX, getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
-        LogHelper.info("G2:" + x);
-        return x;
+        return String.format("item.%s%s", Reference.MOD_ID + ":", getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
     }
 
     @Override
@@ -38,8 +37,6 @@ public class ItemLMR extends Item {
     }
 
     protected String getUnwrappedUnlocalizedName(String unlocalizedName) {
-        String x = unlocalizedName.substring(unlocalizedName.indexOf(".") + 1);
-        LogHelper.info("G3:" + x);
-        return x;
+        return unlocalizedName.substring(unlocalizedName.indexOf(".") + 1);
     }
 }
