@@ -1,0 +1,22 @@
+
+[
+{
+  "modid": "letsmodreloaded",
+  "name": "Lets Mod Reloaded",
+  "description": "Senseidragon's Lets Mod Reboot framework is based largely on prior work of Pahimar.",
+  "version": "${mod_version}",
+  "mcversion": "${minecraft_version}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": [
+    "senseidragon"
+  ],
+  "credits": "Pahimar for his Let's Mod Reboot series.",
+  "logoFile": "",
+  "screenshots": [
+  ],
+  "parent":"",
+  "dependencies": [
+  ]
+}
+]
