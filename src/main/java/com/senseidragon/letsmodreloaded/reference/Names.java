@@ -13,6 +13,7 @@ public class Names
     public static final class Items
     {
         public static final String BOOMSTICK = "boomstick";
+        public static final String DOOMSTICK = "doomstick";
     }
 
     public static final class Fluids
