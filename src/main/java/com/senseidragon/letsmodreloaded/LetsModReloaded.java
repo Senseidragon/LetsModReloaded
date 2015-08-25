@@ -18,6 +18,7 @@
 package com.senseidragon.letsmodreloaded;
 
 import com.senseidragon.letsmodreloaded.handlers.ConfigurationHandler;
+import com.senseidragon.letsmodreloaded.init.ModItems;
 import com.senseidragon.letsmodreloaded.proxy.IProxy;
 import com.senseidragon.letsmodreloaded.reference.Reference;
 import com.senseidragon.letsmodreloaded.utility.LogHelper;
@@ -39,6 +40,7 @@ public class LetsModReloaded {
     public void preInit(FMLPreInitializationEvent event) {
         // Network Handling, Mod Configuration, Block/Item Initialization
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
+        ModItems.init();
         LogHelper.info("Pre Initialization complete!");
     }
 
